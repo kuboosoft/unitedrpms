@@ -1,13 +1,13 @@
 Name:           unitedrpms
-Version:        24
-Release:        2
+Version:        %{fedora}
+Release:        3
 Summary:        UnitedRPMs Repository Configuration
 
 Group:          System Environment/Base
 License:        GPLv3
 URL:            https://unitedrpms.github.io/
 Source1:        https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/unitedrpms.repo
-Source2:        https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-%{version}
+Source2:        https://raw.githubusercontent.com/UnitedRPMs/unitedrpms.github.io/master/URPMS-GPG-PUBLICKEY-Fedora-%{fedora}
 BuildArch:      noarch
 
 
@@ -49,6 +49,9 @@ install -d -m755 \
 %config(noreplace) %{_sysconfdir}/yum.repos.d/*
 
 %changelog
+
+* Mon May 15 2017 David Vásquez <davidjeremias82 AT gmail DOT com> 
+- Added local gpg keys
 
 * Fri Jun 24 2016 David Vásquez <davidjeremias82 AT gmail DOT com> - 24-2
 - Added local gpg keys
